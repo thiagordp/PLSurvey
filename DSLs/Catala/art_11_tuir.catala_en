@@ -1,0 +1,135 @@
+# Art 11 TUIR - Imposta
+
+The gross tax is determined by applying the following rates to the total income, net of deductible expenses indicated in Article 10, based on income brackets:
+
+a) up to 15,000 euros, 23 percent;  
+b) over 15,000 euros and up to 28,000 euros, 25 percent;  
+c) over 28,000 euros and up to 50,000 euros, 35 percent;  
+d) over 50,000 euros, 43 percent.  
+
+```catala-metadata
+declaration enumeration IncomeType:
+-- Pension
+-- RealEstate
+-- Employment
+-- Others
+```
+
+```catala-metadata
+declaration structure Individual:
+  data income content money
+  data income_type content IncomeType
+  data number_of_children content integer
+```
+
+
+
+```catala-metadata
+declaration structure ThreeBrackets:
+  data breakpoint1 content money
+  data breakpoint2 content money
+  data breakpoint3 content money
+  data rate1 content decimal
+  data rate2 content decimal
+  data rate3 content decimal
+  data rate4 content decimal
+
+declaration scope  ThreeBracketsTaxComputation:
+  input brackets content ThreeBrackets
+  output tax_formula content money depends on income content money
+```
+
+
+```catala
+scope ThreeBracketsTaxComputation:
+  definition tax_formula of income equals
+    
+    if income <= brackets.breakpoint1 then
+      income * brackets.rate1
+    else (
+      if income <= brackets.breakpoint2 then
+        income * brackets.rate2
+      else (
+        if income <=brackets.breakpoint3 then
+          income * brackets.rate3
+        else (
+          income * brackets.rate4
+        )
+      )
+    )
+```
+
+
+```catala-metadata
+declaration scope NewIncomeTaxComputation:
+  three_brackets scope ThreeBracketsTaxComputation
+  input individual content Individual
+  output income_tax content money
+```
+
+```catala
+scope NewIncomeTaxComputation:
+  definition three_brackets.brackets equals ThreeBrackets {
+    -- breakpoint1: $15,000
+    -- breakpoint2: $28,000
+    -- breakpoint3: $50,000
+    -- rate1: 23%
+    -- rate2: 25%
+    -- rate3: 35%
+    -- rate4: 43%
+  }
+  label article_11_tuir
+  definition income_tax equals three_brackets.tax_formula of individual.income
+```
+
+
+
+
+```catala
+declaration scope Test1:
+  tax_computation scope NewIncomeTaxComputation
+  output income_tax content money
+
+scope Test1:
+  definition
+    tax_computation.individual
+  equals
+
+    Individual {
+      -- income: $14,000
+      -- number_of_children: 7
+      -- income_type: Employment
+    }
+
+  definition income_tax equals tax_computation.income_tax
+```
+
+
+## Define exception
+
+Se alla formazione del reddito complessivo concorrono uno o più redditi di cui agli articoli 49, spetta una detrazione dall'imposta lorda, rapportata al periodo di lavoro nell'anno, pari a:
+
+a) 1.880 euro, se il reddito complessivo non supera 15.000 euro.
+
+In this case, we need to define an exception
+
+```catala
+scope NewIncomeTaxComputation: 
+  label exception_1_art_11_tuir
+  exception article_11_tuir
+  definition income_tax under condition
+    individual.income < $15,000 and individual.income_type = Employment
+  consequence equals three_brackets.tax_formula of individual.income - $1,800
+  #consequence equals $0
+```
+
+Let's add the exception of the exception.
+
+```catala
+scope NewIncomeTaxComputation: 
+  exception exception_1_art_11_tuir
+  definition income_tax under condition
+    individual.income < $15,000 and individual.income_type = Employment and individual.number_of_children > 5
+  consequence equals $0
+  
+```

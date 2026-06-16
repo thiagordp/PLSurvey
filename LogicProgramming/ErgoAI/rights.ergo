@@ -1,0 +1,26 @@
+
+@defaultRule
+?R:PortabilityRight[
+    subject -> ?S,
+    data -> ?D,
+    controller -> ?C
+] :-
+    ?Proc:Processing[
+        subject -> ?S,
+        data -> ?D,
+        controller -> ?C,
+        legal_basis -> ?Basis
+    ],
+    (?Basis == consent ; ?Basis == contract),
+    ?D:automated_processing,
+    ?R = ${portability(?C,?D,?S)}.
+
+?R:TransmissionRight :-
+    ?R:PortabilityRight[
+        subject -> ?S,
+        data -> ?D,
+        controller -> ?C
+    ],
+    is_feasible(
+        direct_transmission(?C,?D)
+    ).

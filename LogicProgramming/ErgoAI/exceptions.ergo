@@ -1,0 +1,15 @@
+@exception \neg ?R:PortabilityRight[ 
+    subject -> ?S,
+    data -> ?D,
+    controller -> ?C
+] :-
+    ?Proc:Processing[
+      	data -> ?D,
+    	subject -> ?S,
+    	controller -> ?C,
+    	legal_basis -> ?Basis
+    ],
+    (?Basis == public_interest ; ?Basis == official_authority),
+    ?R = ${portability_ex(?C, ?D, ?S)}.
+
+\overrides(exception, defaultRule).
