@@ -1,0 +1,7 @@
+the templates are:
+*a person* is a parent of *a person*,
+*a person* is the mother of *a person*.
+
+the knowledge base parent includes:
+A person is a parent of an other person
+if the person is the mother of the other person.

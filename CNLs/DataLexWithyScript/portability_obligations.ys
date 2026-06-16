@@ -1,0 +1,16 @@
+FORWARD RULE portabilityOBL PROVIDES
+
+IF data subject has the right to data portability AND
+
+data subject requests portability THEN
+
+controller has the obligation to provide data to data subject
+
+
+FORWARD RULE directtransmissionOBL PROVIDES
+
+IF data subject has the right to have the personal data transmitted directly from one controller to another AND
+
+data subject requests direct transmission THEN
+
+controller has the obligation to transmit directly to other controller
