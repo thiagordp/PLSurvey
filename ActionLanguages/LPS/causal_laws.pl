@@ -1,0 +1,69 @@
+request(
+    Subject,
+    data_portability(
+        Data,
+        Controller
+    )
+)
+initiates
+obligation(
+    provide_data(
+        Controller,
+        Subject
+    )
+)
+if
+right(
+    Subject,
+    data_portability(
+        Data,
+        Controller
+    )
+).
+
+provideData(
+    Controller,
+    Subject
+)
+terminates
+obligation(
+    provide_data(
+        Controller,
+        Subject
+    )
+).
+
+request(
+    Subject,
+    direct_transmission(
+        Controller,
+        NewController
+    )
+)
+initiates
+obligation(
+    transmit(
+        Controller,
+        NewController
+    )
+)
+if
+right(
+    Subject,
+    direct_transmission(
+        Controller,
+        NewController
+    )
+).
+
+provideData(
+    Controller,
+    NewController
+)
+terminates
+obligation(
+    transmit(
+        Controller,
+        NewController
+    )
+).
