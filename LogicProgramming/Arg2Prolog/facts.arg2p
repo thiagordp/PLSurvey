@@ -1,0 +1,15 @@
+%%%% Example Facts
+
+f1 :-> processing_basis(consent(subject, controller)).
+% f2 :-> processing_basis(public_interest(subject, controller)).
+f3 :-> processing_method(automatic).
+f4 :-> feasible(data_transmission(new_controller)).
+
+f5 :-> request(subject, data_portability(controller)).
+f6 :-> request(subject, data_transmission(controller, new_controller)).
+
+f7 :-> -provide_data(controller, new_controller).
+
+f8 :-> annual_turnover(controller, 40000000).
+
+f9 :-> concrete_tax_harm(subject).

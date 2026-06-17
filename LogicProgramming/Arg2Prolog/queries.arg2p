@@ -1,0 +1,5 @@
+right(subject, data_portability(controller)).
+o(provide_data(controller, subject)).
+p(provide_data(controller, subject)).
+violation(provide_data(controller, new_controller)).
+remedy(provide_data(controller, _), pay_fine(controller, Z)).

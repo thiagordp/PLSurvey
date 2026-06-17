@@ -1,0 +1,9 @@
+%%%% (Optional) Preferences (An undercutter would be more suited but lets use preferences anyway)
+
+% Art. 2-undecies codice privacy (Limitazioni ai diritti dell'interessato)
+% 1. I diritti di cui agli articoli da 15 a 22 del Regolamento non possono essere esercitati con richiesta al titolare del trattamento ovvero con reclamo ai sensi dell'articolo 77 del Regolamento qualora dall'esercizio di tali diritti possa derivare un pregiudizio effettivo e concreto:
+%	[..]
+%	f-bis) agli interessi tutelati in materia tributaria e allo svolgimento delle attivita di prevenzione e contrasto all'evasione fiscale.
+
+r9(Subject, Controller) : processing_basis(consent(Subject, Controller)), processing_method(automatic), concrete_tax_harm(Subject) => -right(Subject, data_portability(Controller)).
+sup(r9(X, Y), r1(X, Y)).

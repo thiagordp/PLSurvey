@@ -1,0 +1,5 @@
+%%%% (Optional) Derived permissions (One could model deontic axioms of their choice, e.g. weak permissions, etc...)
+r(Z) : o(Z) => p(Z).
+
+%%%% (Optional) Violation (Can be expanded to arbitrary conflicts)
+v(Z) : o(Z), -Z => violation(Z).
