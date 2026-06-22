@@ -11,11 +11,11 @@ This repository contains formalisations of specific legal texts: the **GDPR Righ
 
 ### 1. GDPR Article 20: Right to Data Portability
 Focuses on modelling the conditions under which a data subject has the right to receive personal data or have it transmitted to another controller, including exceptions (e.g., Article 20(3) regarding public interest).
-* **Key Formalisms:** Logic Programming (sCASP, ErgoAI), Action Languages (LPS, InstAL), CNLs (Logical English).
+* **Key Formalisms:** Logic Programming, Action Languages, CNLs.
 
 ### 2. Italian Tax Law: TUIR Article 11
 Focuses on the progressive calculation of personal income tax (IRPEF), including tax brackets, rates, and specific exemptions or discounts based on family composition and employment status.
-* **Key Formalisms:** DSLs (OpenFisca, Catala).
+* **Key Formalisms:** DSLs.
 
 ## Repository Structure
 
