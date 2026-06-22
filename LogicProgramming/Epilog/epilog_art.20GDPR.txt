@@ -1,0 +1,47 @@
+### RULES
+
+right(Subject, data_portability(Controller)):-
+personal_data(Data,Subject) &
+processing_basis(consent(Subject,Controller)) &
+processing_method(automatic,Data) &
+~processing_basis(public_interest(Subject,Controller)) &
+~processing_basis(public_authority(Subject,Controller))
+
+right(Subject, data_portability(Controller)):-
+personal_data(Data,Subject) &
+processing_basis(contract(Subject,Controller)) &
+processing_method(automatic,Data) &
+~processing_basis(public_interest(Subject,Controller)) &
+~processing_basis(public_authority(Subject,Controller))
+
+
+obl(Controller, provide_data(Subject)):-
+right(Subject, data_portability(Controller)) &
+request(Subject, data_portability)
+
+obl(Controller, provide_data(Controller1)):-
+right(Subject, data_portability(Controller)) &
+request(Subject, direct_transmission(Controller1)) &
+feasible(direct_transmission(Controller1))
+
+
+
+### ACTIONS
+
+request(S,data_portability) :: right(S,data_portability(Controller)) ==> obl(Controller,provide_data(S),deadline)
+
+fact(Controller, provide_data(S)) :: obl(Controller, provide_data(S),deadline) ==> ~obl(Controller,provide_data(S),deadline)
+
+fact(deadline) :: obl(Controller, provide_data(S),deadline) ==> violation(obl(Controller,provide_data(S),deadline))
+
+
+
+
+### DATA
+
+personal_data(name,marco)
+processing_basis(consent(marco,facebook))
+processing_method(automatic,name)
+
+
+

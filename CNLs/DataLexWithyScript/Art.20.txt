@@ -1,0 +1,22 @@
+GOAL RULE portabilityRight PROVIDES
+data subject has the right to data portability ONLY IF 
+the processing is based on consent AND/OR
+the processing is based on contract AND
+the processing is automated AND
+the processing is not necessary for public interest AND
+the processing is not necessary for the exercise of official authority vested in the controller
+
+FORWARD RULE portabilityOBL PROVIDES
+IF data subject has the right to data portability AND
+data subject requests portability THEN
+controller has the obligation to provide data to data subject
+
+GOAL RULE directtransmissionRight PROVIDES
+data subject has the right to have the personal data transmitted directly from one controller to another ONLY IF 
+data subject has the right to data portability AND
+direct transmission is technically feasible
+
+FORWARD RULE directtransmissionOBL PROVIDES
+IF data subject has the right to have the personal data transmitted directly from one controller to another AND
+data subject requests direct transmission THEN
+controller has the obligation to transmit directly to other controller

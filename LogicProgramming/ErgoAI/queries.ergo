@@ -1,4 +1,0 @@
-portability_for(?Person, ?Right) :-
-    ?Right:PortabilityRight[
-        subject -> ?Person
-    ].

@@ -1,6 +1,0 @@
-#include "ontology.ergo"
-#include "facts.ergo"
-#include "rights.ergo"
-#include "exceptions.ergo"
-#include "priorities.ergo"
-#include "queries.ergo"

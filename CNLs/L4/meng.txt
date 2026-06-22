@@ -1,0 +1,14 @@
+Alloy6 spec language
+curry language
+
+deontics disappear in a state machine
+
+
+
+linear temporal logic
+
+
+
+DMN Decision model notation - bpmn.io / feel language
+
+OMG standard development organization

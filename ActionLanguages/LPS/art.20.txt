@@ -1,0 +1,65 @@
+% % --- 1. DECLARATIONS (Arity Indication) ---
+fluents    obligation/1.
+events     request/2, provideData/2.
+actions    deadlineViolation/1.
+
+% % --- 2. BELIEFS (Constitutive Rules) ---
+% CR1: Primary Right to Data Portability
+right(Subject, data_portability(Data, Controller)) :-
+    personal_data(Subject, Data),
+    automated_processing(Data, Controller),
+    processing_basis(consent, Data),
+    not processing_basis(public_interest, Data),
+    not processing_basis(exercise_public_authority, Data).
+
+% CR2: Accessory Right to Direct Transmission
+right(Subject, direct_transmission(Controller, NewController)) :-
+    right(Subject, data_portability(Data, Controller)),
+    isTechnicallyFeasible(direct_transmission(Controller, NewController)).
+
+
+% % --- 3. CAUSAL LAWS (Regulative Rules) ---
+% These laws define how events "initiate" or "terminate" the state of obligation.
+
+% RR1: Initiation and Termination for Portability Obligaiton
+request(Subject, data_portability(Data, Controller)) initiates obligation(provide_data(Controller, Subject)) 
+    if right(Subject, data_portability(Data, Controller)).
+
+provideData(Controller, Subject) terminates obligation(provide_data(Controller, Subject)).
+
+% RR2: Initiation and Termination for Direct Transmission Obligation
+request(Subject, direct_transmission(Controller, NewController)) initiates obligation(transmit(Controller, NewController)) 
+    if right(Subject, direct_transmission(Controller, NewController)).
+
+provideData(Controller, NewController) terminates obligation(transmit(Controller, NewController)).
+
+
+% % % --- 4. REACTIVE RULES (Agent Behaviour) ---
+% Deadline from article 12 GDPR.
+
+% Monitoring Portability Deadline
+if 	request(Subject, data_portability(_, Controller)) from T, 
+	obligation(provide_data(Controller, Subject)) at T1,
+	T1 is T + 5
+then deadlineViolation(provide_data(Controller, Subject)) from T1.
+
+% Monitoring Direct Transmission Deadline
+if 	request(Subject, direct_transmission(Controller, NewController)) from T, 
+	obligation(transmit(Controller, NewController)) at T1,
+	T1 is T + 5
+then deadlineViolation(transmit(Controller, NewController)) from T1.
+
+
+% % % --- 5. SAMPLE SCENARIO (Fact Base & Simulation) ---
+
+% Static World Facts
+personal_data(marco, nome).
+automated_processing(nome, facebook).
+processing_basis(consent, nome).
+isTechnicallyFeasible(direct_transmission(facebook, google)).
+
+% Timeline of Observations
+observe request(marco, data_portability(nome, facebook)) at 2.
+observe provideData(facebook, marco) at 4.
+observe request(marco, direct_transmission(facebook, google)) at 5.
+%    at T=10 (5 + 5), the reactive rule will trigger deadlineViolation.

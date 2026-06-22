@@ -1,0 +1,651 @@
+- model: blawx.ruledoc
+  pk: 6
+  fields:
+    ruledoc_name: RPS
+    rule_text: "Rock Paper Scissors Act\r\n\r\nPlayers\r\n1. A game of rock paper
+      scissors has two players.\r\n2. There are three signs:\r\n  (a) Rock,\r\n  (b)
+      Paper, and\r\n  (c) Scissors.\r\n\r\nDefeating Relationships\r\n3. The signs
+      are related in the following ways:\r\n  (a) Rock beats Scissors,\r\n  (b) Scissors
+      beats Paper, and\r\n  (c) Paper beats Rock.\r\n\r\nWinner\r\n4. The winner of
+      a game is the player who throws\r\na sign that beats the sign of the other player."
+    rule_slug: rps
+    akoma_ntoso: <?xml version="1.0" encoding="UTF-8"?><akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><act><preface><p
+      class="title"><shortTitle>Rock Paper Scissors Act</shortTitle></p></preface><body><section
+      eId="sec_1"><num>1</num><heading>Players</heading><content><p>A game of rock
+      paper scissors has two players.</p></content></section><section eId="sec_2"><num>2</num><intro><p>There
+      are three signs:</p></intro><paragraph eId="sec_2__para_a"><num>a</num><content><p>Rock,</p></content></paragraph><paragraph
+      eId="sec_2__para_b"><num>b</num><content><p>Paper, and</p></content></paragraph><paragraph
+      eId="sec_2__para_c"><num>c</num><content><p>Scissors.</p></content></paragraph></section><section
+      eId="sec_3"><num>3</num><heading>Defeating Relationships</heading><intro><p>The
+      signs are related in the following ways:</p></intro><paragraph eId="sec_3__para_a"><num>a</num><content><p>Rock
+      beats Scissors,</p></content></paragraph><paragraph eId="sec_3__para_b"><num>b</num><content><p>Scissors
+      beats Paper, and</p></content></paragraph><paragraph eId="sec_3__para_c"><num>c</num><content><p>Paper
+      beats Rock.</p></content></paragraph></section><section eId="sec_4"><num>4</num><heading>Winner</heading><content><p>The
+      winner of a game is the player who throws a sign that beats the sign of the
+      other player.</p></content></section></body></act></akomaNtoso>
+    navtree: '<nav class="column">
+
+      <div class="lawpart act"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="root_section" checked><div class="lawtext"><i
+      class="bi bi-caret-right" data-bs-toggle="collapse" data-bs-target="#root"></i>Rock
+      Paper Scissors Act</div></div></div><div class="subparts collapse" id="root"><div
+      class="lawpart section"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="sec_1_section"><div class="lawtext"><num>1</num>Players
+      <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>A game
+      of rock paper scissors has two players.</p></content></div></div></div><div
+      class="lawpart section"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="sec_2_section"><div class="lawtext"><i class="bi
+      bi-caret-right" data-bs-toggle="collapse" data-bs-target="#sec_2"></i><num>2</num><intro
+      xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>There are three
+      signs:</p></intro></div></div></div><div class="subparts collapse" id="sec_2"><div
+      class="lawpart paragraph"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="sec_2__para_a_section"><div class="lawtext"><num>a</num>
+      <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Rock,</p></content></div></div></div><div
+      class="lawpart paragraph"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="sec_2__para_b_section"><div class="lawtext"><num>b</num>
+      <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Paper,
+      and</p></content></div></div></div><div class="lawpart paragraph"><div class="form-check"><input
+      class="form-check-input" type="radio" name="section" id="sec_2__para_c_section"><div
+      class="lawtext"><num>c</num> <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Scissors.</p></content></div></div></div></div><div
+      class="lawpart section"><div class="form-check"><input class="form-check-input"
+      type="radio" name="section" id="sec_3_section"><div class="lawtext"><i class="bi
+      bi-caret-right" data-bs-toggle="collapse" data-bs-target="#sec_3"></i><num>3</num>Defeating
+      Relationships<intro xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>The
+      signs are related in the following ways:</p></intro></div></div></div><div class="subparts
+      collapse" id="sec_3"><div class="lawpart paragraph"><div class="form-check"><input
+      class="form-check-input" type="radio" name="section" id="sec_3__para_a_section"><div
+      class="lawtext"><num>a</num> <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Rock
+      beats Scissors,</p></content></div></div></div><div class="lawpart paragraph"><div
+      class="form-check"><input class="form-check-input" type="radio" name="section"
+      id="sec_3__para_b_section"><div class="lawtext"><num>b</num> <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Scissors
+      beats Paper, and</p></content></div></div></div><div class="lawpart paragraph"><div
+      class="form-check"><input class="form-check-input" type="radio" name="section"
+      id="sec_3__para_c_section"><div class="lawtext"><num>c</num> <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>Paper
+      beats Rock.</p></content></div></div></div></div><div class="lawpart section"><div
+      class="form-check"><input class="form-check-input" type="radio" name="section"
+      id="sec_4_section"><div class="lawtext"><num>4</num>Winner <content xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"><p>The
+      winner of a game is the player who throws a sign that beats the sign of the
+      other player.</p></content></div></div></div></div></nav>'
+    scasp_encoding: ''
+    tutorial: ''
+    owner: 4
+    published: false
+- model: blawx.workspace
+  pk: 37
+  fields:
+    ruledoc: 6
+    workspace_name: root_section
+    xml_content: <xml xmlns="https://developers.google.com/blockly/xml"><block type="unattributed_rule"
+      id="9a$~RlmSu8L!zSd]v-(r" x="116" y="66"><statement name="conditions"><block
+      type="new_object_category" id="eyW#c1E2$MNkOD~Y~hLe"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      category_name="player" category_list="[[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"></mutation><field
+      name="category_name">player</field><value name="object"><block type="variable"
+      id="bOf9=(5GCqVZ3$HQW+J~"><field name="variable_name">Player1</field></block></value><next><block
+      type="new_object_category" id="n{c1;,~YC}Wa#sR/Dh.y"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      category_name="player" category_list="[[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"></mutation><field
+      name="category_name">player</field><value name="object"><block type="variable"
+      id=";CLkc387u4Q6$EMwPuK."><field name="variable_name">Player2</field></block></value><next><block
+      type="attribute_selector" id="5P1SECe$nOwHqAU$f!Vw"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      attributename="move" attributetype="sign" attributeorder="ov"></mutation><field
+      name="prefix"></field><field name="infix">plays</field><field name="postfix"></field><value
+      name="first_element"><block type="variable" id="yh{Z9$lhMX!67;,DJCtQ"><field
+      name="variable_name">Player1</field></block></value><value name="second_element"><block
+      type="object_selector" id="AI!`bx7?lLq/jx_ioZl]"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      objectname="rock"></mutation><field name="object_name">rock</field></block></value><next><block
+      type="attribute_selector" id="=[d6X?{)~B5`(ig0Rz)7"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      attributename="move" attributetype="sign" attributeorder="ov"></mutation><field
+      name="prefix"></field><field name="infix">plays</field><field name="postfix"></field><value
+      name="first_element"><block type="variable" id="q5Pg=D?E#pR!9GeinIWX"><field
+      name="variable_name">Player2</field></block></value><value name="second_element"><block
+      type="object_selector" id="RR@8=(,,-ucs[]}WIoEf"><mutation xmlns="http://www.w3.org/1999/xhtml"
+      objectname="scissor"></mutation><field name="object_name">scissor</field></block></value></block></next></block></next></block></next></block></statement><statement
+      name="conclusion"><block type="unary_attribute_selector" id="$BqMJ.GaKP$Dq~%U%F+y"><mutation
+      xmlns="http://www.w3.org/1999/xhtml" attributename="winner" attributetype="boolean"></mutation><field
+      name="prefix"></field><field name="postfix">is the winner</field><value name="first_element"><block
+      type="variable" id=":,t/#DzL~AP;7YvBWp:H"><field name="variable_name">Player1</field></block></value></block></statement></block><block
+      type="unattributed_fact" id="y8rEeBjlOXc}26;KuJZK" x="681" y="44"><statement
+      name="statements"><block type="new_category_declaration" id="JVVYUbd`zbGJOX$H0(ek"><field
+      name="category_name">player</field><field name="prefix"></field><field name="first_element">object</field><field
+      name="postfix">is a player</field><next><block type="new_attribute_declaration"
+      id="Uiyf2t9x~tl2O5z]t{52"><mutation xmlns="http://www.w3.org/1999/xhtml" category_name="player"
+      category_list="[[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"
+      attribute_type="sign" attribute_list="[[&quot;true / false&quot;,&quot;boolean&quot;],[&quot;number&quot;,&quot;number&quot;],[&quot;date&quot;,&quot;date&quot;],[&quot;time&quot;,&quot;time&quot;],[&quot;datetime&quot;,&quot;datetime&quot;],[&quot;duration&quot;,&quot;duration&quot;],[&quot;list&quot;,&quot;list&quot;],[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"></mutation><field
+      name="category_name">player</field><field name="attribute_name">move</field><field
+      name="attribute_type">sign</field><field name="order">ov</field><field name="prefix"></field><field
+      name="first_element">object</field><field name="infix">plays</field><field name="second_element">value</field><field
+      name="postfix"></field><next><block type="new_attribute_declaration" id="8]1pL~qSw6N!?V~_j:an"><mutation
+      xmlns="http://www.w3.org/1999/xhtml" category_name="player" category_list="[[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"
+      attribute_type="boolean" attribute_list="[[&quot;true / false&quot;,&quot;boolean&quot;],[&quot;number&quot;,&quot;number&quot;],[&quot;date&quot;,&quot;date&quot;],[&quot;time&quot;,&quot;time&quot;],[&quot;datetime&quot;,&quot;datetime&quot;],[&quot;duration&quot;,&quot;duration&quot;],[&quot;list&quot;,&quot;list&quot;],[&quot;player&quot;,&quot;player&quot;],[&quot;sign&quot;,&quot;sign&quot;]]"></mutation><field
+      name="category_name">player</field><field name="attribute_name">winner</field><field
+      name="attribute_type">boolean</field><field name="order">ov</field><field name="prefix"></field><field
+      name="first_element">object</field><field name="infix">'s attribute name is</field><field
+      name="second_element">value</field><field name="postfix">is the winner</field></block></next></block></next></block></statement></block><block
+      type="unattributed_fact" id="@Il.qm[t,Sya=kDT;qA@" x="698" y="345"><statement
+      name="statements"><block type="new_category_declaration" id="$@^s*RSdaSw@.|=_sXP["><field
+      name="category_name">sign</field><field name="prefix"></field><field name="first_element">object</field><field
+      name="postfix">is a sign</field><next><block type="object_declaration" id="I2A%!%/SL4U*D)O!J!so"><mutation
+      xmlns="http://www.w3.org/1999/xhtml" category_name="sign" prefix="null" postfix="null"></mutation><field
+      name="prefix"></field><field name="object_name">rock</field><field name="postfix">is
+      a sign</field><next><block type="object_declaration" id="^9~FN^.e=o9MQ!$2z}ho"><mutation
+      xmlns="http://www.w3.org/1999/xhtml" category_name="sign" prefix="null" postfix="null"></mutation><field
+      name="prefix"></field><field name="object_name">paper</field><field name="postfix">is
+      a sign</field><next><block type="object_declaration" id="NUGBJmBLkUzF/@6vlDfl"><mutation
+      xmlns="http://www.w3.org/1999/xhtml" category_name="sign" prefix="null" postfix="null"></mutation><field
+      name="prefix"></field><field name="object_name">scissor</field><field name="postfix">is
+      a sign</field></block></next></block></next></block></next></block></statement></block></xml>
+    scasp_encoding: 'winner(Player1) :-
+
+      player(Player1),
+
+      player(Player2),
+
+      move(Player1,rock),
+
+      move(Player2,scissor).
+
+
+      blawx_category(player).
+
+      blawx_category_nlg(player,"","is a player").
+
+      :- dynamic player/1.
+
+      #pred player(X) :: ''@(X) is a player''.
+
+      #pred holds(user,player,X) :: ''it is provided as a fact that @(X) is a player''.
+
+      #pred holds(user,-player,X) :: ''it is provided as a fact that it is not the
+      case that @(X) is a player''.
+
+      #pred holds(Z,player,X) :: ''the conclusion in @(Z) that @(X) is a player holds''.
+
+      #pred holds(Z,-player,X) :: ''the conclusion in @(Z) that it is not the case
+      that @(X) is a player holds''.
+
+      #pred according_to(Z,player,X) :: ''according to @(Z), @(X) is a player''.
+
+      #pred according_to(Z,-player,X) :: ''according to @(Z), it is not the case that
+      @(X) is a player''.
+
+      #pred blawx_defeated(Z,player,X) :: ''the conclusion in @(Z) that @(X) is a
+      player is defeated''.
+
+      #pred blawx_defeated(Z,-player,X) :: ''the conclusion in @(Z) that it is not
+      the case that @(X) is a player is defeated''.
+
+      #pred blawx_initially(player(X)) :: ''that @(X) is a player holds initially''.
+
+      #pred blawx_initially(-player(X)) :: ''that it is not the case that @(X) is
+      a player holds initially''.
+
+      #pred blawx_ultimately(player(X)) :: ''that @(X) is a player holds ultimately''.
+
+      #pred blawx_ultimately(-player(X)) :: ''that it is not the case that @(X) is
+      a player holds ultimately''.
+
+      #pred blawx_as_of(player(X),T) :: ''that @(X) is a player holds at @(T)''.
+
+      #pred blawx_as_of(-player(X),T) :: ''that it is not the case that @(X) is a
+      player holds at @(T)''.
+
+      #pred blawx_during(T1,player(X),T2) :: ''that @(X) is a player held between
+      @(T1) and @(T2)''.
+
+      #pred blawx_during(T1,-player(X),T2) :: ''that it is not the case that @(X)
+      is a player held between @(T1) and @(T2)''.
+
+      #pred blawx_becomes(player(X),T) :: ''that @(X) is a player became true at @(T)''.
+
+      #pred blawx_becomes(-player(X),T) :: ''that it is not the case that @(X) is
+      a player became true at @(T)''.
+
+      #pred blawx_not_interrupted(Start,player(X),End) :: ''@(X) is a player remained
+      the case between @(Start) and @(End)''.
+
+      #pred blawx_not_interrupted(Start,-player(X),End) :: ''it is not the case that
+      @(X) is a player remained the case between @(Start) and @(End)''.
+
+      blawx_not_interrupted(datetime(Start),player(X),datetime(End)) :- Start \= bot,
+      End \= eot, findall(Time,blawx_becomes(-player(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(Start),-player(X),datetime(End)) :- Start \=
+      bot, End \= eot, findall(Time,blawx_becomes(player(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(bot),player(X),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(-player(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(bot),-player(X),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(player(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(Start),player(X),datetime(eot)) :- Start \= bot,
+      findall(Time,blawx_becomes(-player(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(Start),-player(X),datetime(eot)) :- Start \=
+      bot, findall(Time,blawx_becomes(player(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(bot),player(X),datetime(eot)) :- blawx_initially(player(X)),
+      blawx_ultimately(player(X)), findall(Time,blawx_becomes(-player(X),datetime(Time)),[]).
+
+      blawx_not_interrupted(datetime(bot),-player(X),datetime(eot)) :- blawx_initially(-player(X)),
+      blawx_ultimately(-player(X)), findall(Time,blawx_becomes(player(X),datetime(Time)),[]).
+
+      blawx_as_of(player(X),datetime(Time)) :- blawx_initially(player(X)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),player(X),datetime(BeforeT)).
+
+      blawx_as_of(player(X),datetime(Time)) :- blawx_becomes(player(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),player(X),datetime(Time)).
+
+      blawx_as_of(-player(X),datetime(Time)) :- blawx_initially(-player(X)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),-player(X),datetime(BeforeT)).
+
+      blawx_as_of(-player(X),datetime(Time)) :- blawx_becomes(-player(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),-player(X),datetime(Time)).
+
+      blawx_during(datetime(Start),player(X),datetime(End)) :- blawx_becomes(player(X),datetime(Start)),
+      blawx_becomes(-player(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),player(X),datetime(End)).
+
+      blawx_during(datetime(bot),player(X),datetime(End)) :- blawx_initially(player(X)),
+      blawx_becomes(-player(X),datetime(End)), blawx_not_interrupted(datetime(bot),player(X),datetime(End)).
+
+      blawx_during(datetime(Start),player(X),datetime(eot)) :- blawx_ultimately(player(X)),
+      blawx_becomes(-player(X),datetime(Start)), blawx_not_interrupted(datetime(Start),player(X),datetime(eot)).
+
+      blawx_during(datetime(bot),player(X),datetime(eot)) :- blawx_initially(player(X)),
+      blawx_ultimately(player(X)), blawx_becomes(-player(X),datetime(Start)), blawx_not_interrupted(datetime(bot),player(X),datetime(eot)).
+
+      blawx_during(datetime(Start),-player(X),datetime(End)) :- blawx_becomes(-player(X),datetime(Start)),
+      blawx_becomes(player(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),-player(X),datetime(End)).
+
+      blawx_during(datetime(bot),-player(X),datetime(End)) :- blawx_initially(-player(X)),
+      blawx_becomes(player(X),datetime(End)), blawx_not_interrupted(datetime(bot),-player(X),datetime(End)).
+
+      blawx_during(datetime(Start),-player(X),datetime(eot)) :- blawx_ultimately(-player(X)),
+      blawx_becomes(player(X),datetime(Start)), blawx_not_interrupted(datetime(Start),-player(X),datetime(eot)).
+
+      blawx_during(datetime(bot),-player(X),datetime(eot)) :- blawx_initially(-player(X)),
+      blawx_ultimately(-player(X)), blawx_becomes(-player(X),datetime(Start)), blawx_not_interrupted(datetime(bot),-player(X),datetime(eot)).
+
+      blawx_attribute(player,move,sign).
+
+      blawx_attribute_nlg(move,ov,"","plays","").
+
+      :- dynamic move/2.
+
+      #pred move(X,Y) :: ''@(X) plays @(Y)''.
+
+      #pred holds(user,move,X,Y) :: ''it is provided as a fact that @(X) plays @(Y)''.
+
+      #pred holds(user,-move,X,Y) :: ''it is provided as a fact that it is not the
+      case that @(X) plays @(Y)''.
+
+      #pred holds(Z,move,X,Y) :: ''the conclusion in @(Z) that @(X) plays @(Y) holds''.
+
+      #pred holds(Z,-move,X,Y) :: ''the conclusion in @(Z) that it is not the case
+      that @(X) plays @(Y) holds''.
+
+      #pred according_to(Z,move,X,Y) :: ''according to @(Z), @(X) plays @(Y)''.
+
+      #pred according_to(Z,-move,X,Y) :: ''according to @(Z), it is not the case that
+      @(X) plays @(Y)''.
+
+      #pred blawx_defeated(Z,move,X,Y) :: ''the conclusion in @(Z) that @(X) plays
+      @(Y) is defeated''.
+
+      #pred blawx_defeated(Z,-move,X,Y) :: ''the conclusion in @(Z) that @(X) plays
+      @(Y) is defeated''.
+
+      #pred blawx_initially(move(X,Y)) :: ''that @(X) plays @(Y) holds initially''.
+
+      #pred blawx_initially(-move(X,Y)) :: ''that it is not the case that @(X) plays
+      @(Y) holds initially''.
+
+      #pred blawx_ultimately(move(X,Y)) :: ''that @(X) plays @(Y) holds ultimately''.
+
+      #pred blawx_ultimately(-move(X,Y)) :: ''that it is not the case that @(X) plays
+      @(Y) holds ultimately''.
+
+      #pred blawx_as_of(move(X,Y),T) :: ''that @(X) plays @(Y) holds at @(T)''.
+
+      #pred blawx_as_of(-move(X,Y),T) :: ''that it is not the case that @(X) plays
+      @(Y) holds at @(T)''.
+
+      #pred blawx_during(T1,move(X,Y),T2) :: ''that @(X) plays @(Y) held between @(T1)
+      and @(T2)''.
+
+      #pred blawx_during(T1,-move(X,Y),T2) :: ''that it is not the case that @(X)
+      plays @(Y) held between @(T1) and @(T2)''.
+
+      #pred blawx_becomes(move(X,Y),T) :: ''that @(X) plays @(Y) became true at @(T)''.
+
+      #pred blawx_becomes(-move(X,Y),T) :: ''that it is not the case that @(X) plays
+      @(Y) became true at @(T)''.
+
+      #pred blawx_not_interrupted(Start,move(X,Y),End) :: ''@(X) plays @(Y) remained
+      the case between @(Start) and @(End)''.
+
+      #pred blawx_not_interrupted(Start,-move(X,Y),End) :: ''it is not the case that
+      @(X) plays @(Y) remained the case between @(Start) and @(End)''.
+
+      blawx_not_interrupted(datetime(Start),move(X,Y),datetime(End)) :- Start \= bot,
+      End \= eot, findall(Time,blawx_becomes(-move(X,Y),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(Start),-move(X,Y),datetime(End)) :- Start \=
+      bot, End \= eot, findall(Time,blawx_becomes(move(X,Y),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(bot),move(X,Y),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(-move(X,Y),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(bot),-move(X,Y),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(move(X,Y),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(Start),move(X,Y),datetime(eot)) :- Start \= bot,
+      findall(Time,blawx_becomes(-move(X,Y),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(Start),-move(X,Y),datetime(eot)) :- Start \=
+      bot, findall(Time,blawx_becomes(move(X,Y),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(bot),move(X,Y),datetime(eot)) :- blawx_initially(move(X,Y)),
+      blawx_ultimately(move(X,Y)), findall(Time,blawx_becomes(-move(X,Y),datetime(Time)),[]).
+
+      blawx_not_interrupted(datetime(bot),-move(X,Y),datetime(eot)) :- blawx_initially(-move(X,Y)),
+      blawx_ultimately(-move(X,Y)), findall(Time,blawx_becomes(move(X,Y),datetime(Time)),[]).
+
+      blawx_as_of(move(X,Y),datetime(Time)) :- blawx_initially(move(X,Y)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),move(X,Y),datetime(BeforeT)).
+
+      blawx_as_of(move(X,Y),datetime(Time)) :- blawx_becomes(move(X,Y),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),move(X,Y),datetime(Time)).
+
+      blawx_as_of(-move(X,Y),datetime(Time)) :- blawx_initially(-move(X,Y)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),-move(X,Y),datetime(BeforeT)).
+
+      blawx_as_of(-move(X,Y),datetime(Time)) :- blawx_becomes(-move(X,Y),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),-move(X,Y),datetime(Time)).
+
+      blawx_during(datetime(Start),move(X,Y),datetime(End)) :- blawx_becomes(move(X,Y),datetime(Start)),
+      blawx_becomes(-move(X,Y),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),move(X,Y),datetime(End)).
+
+      blawx_during(datetime(bot),move(X,Y),datetime(End)) :- blawx_initially(move(X,Y)),
+      blawx_becomes(-move(X,Y),datetime(End)), blawx_not_interrupted(datetime(bot),move(X,Y),datetime(End)).
+
+      blawx_during(datetime(Start),move(X,Y),datetime(eot)) :- blawx_ultimately(move(X,Y)),
+      blawx_becomes(-move(X,Y),datetime(Start)), blawx_not_interrupted(datetime(Start),move(X,Y),datetime(eot)).
+
+      blawx_during(datetime(bot),move(X,Y),datetime(eot)) :- blawx_initially(move(X,Y)),
+      blawx_ultimately(move(X,Y)), blawx_becomes(-move(X,Y),datetime(Start)), blawx_not_interrupted(datetime(bot),move(X,Y),datetime(eot)).
+
+      blawx_during(datetime(Start),-move(X,Y),datetime(End)) :- blawx_becomes(-move(X,Y),datetime(Start)),
+      blawx_becomes(move(X,Y),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),-move(X,Y),datetime(End)).
+
+      blawx_during(datetime(bot),-move(X,Y),datetime(End)) :- blawx_initially(-move(X,Y)),
+      blawx_becomes(move(X,Y),datetime(End)), blawx_not_interrupted(datetime(bot),-move(X,Y),datetime(End)).
+
+      blawx_during(datetime(Start),-move(X,Y),datetime(eot)) :- blawx_ultimately(-move(X,Y)),
+      blawx_becomes(move(X,Y),datetime(Start)), blawx_not_interrupted(datetime(Start),-move(X,Y),datetime(eot)).
+
+      blawx_during(datetime(bot),-move(X,Y),datetime(eot)) :- blawx_initially(-move(X,Y)),
+      blawx_ultimately(-move(X,Y)), blawx_becomes(-move(X,Y),datetime(Start)), blawx_not_interrupted(datetime(bot),-move(X,Y),datetime(eot)).
+
+      blawx_attribute(player,winner,boolean).
+
+      blawx_attribute_nlg(winner,not_applicable,"",not_applicable,"is the winner").
+
+      :- dynamic winner/1.
+
+      #pred winner(X) :: ''@(X) is the winner''.
+
+      #pred holds(user,winner,X) :: ''it is provided as a fact that @(X) is the winner''.
+
+      #pred holds(user,-winner,X) :: ''it is provided as a fact that it is not the
+      case that @(X) is the winner''.
+
+      #pred holds(Z,winner,X) :: ''the conclusion in @(Z) that @(X) is the winner
+      holds''.
+
+      #pred holds(Z,-winner,X) :: ''the conclusion in @(Z) that it is not the case
+      that @(X) is the winner holds''.
+
+      #pred according_to(Z,winner,X) :: ''according to @(Z), @(X) is the winner''.
+
+      #pred according_to(Z,-winner,X) :: ''according to @(Z), it is not the case that
+      @(X) is the winner''.
+
+      #pred blawx_defeated(Z,winner,X) :: ''the conclusion in @(Z) that @(X) is the
+      winner is defeated''.
+
+      #pred blawx_defeated(Z,-winner,X) :: ''the conclusion in @(Z) that @(X) is the
+      winner is defeated''.
+
+      #pred blawx_initially(winner(X)) :: ''that @(X) is the winner holds initially''.
+
+      #pred blawx_initially(-winner(X)) :: ''that it is not the case that @(X) is
+      the winner holds initially''.
+
+      #pred blawx_ultimately(winner(X)) :: ''that @(X) is the winner holds ultimately''.
+
+      #pred blawx_ultimately(-winner(X)) :: ''that it is not the case that @(X) is
+      the winner holds ultimately''.
+
+      #pred blawx_as_of(winner(X),T) :: ''that @(X) is the winner holds at @(T)''.
+
+      #pred blawx_as_of(-winner(X),T) :: ''that it is not the case that @(X) is the
+      winner holds at @(T)''.
+
+      #pred blawx_during(T1,winner(X),T2) :: ''that @(X) is the winner held between
+      @(T1) and @(T2)''.
+
+      #pred blawx_during(T1,-winner(X),T2) :: ''that it is not the case that @(X)
+      is the winner held between @(T1) and @(T2)''.
+
+      #pred blawx_becomes(winner(X),T) :: ''that @(X) is the winner became true at
+      @(T)''.
+
+      #pred blawx_becomes(-winner(X),T) :: ''that it is not the case that @(X) is
+      the winner became true at @(T)''.
+
+      #pred blawx_not_interrupted(Start,winner(X),End) :: ''@(X) is the winner remained
+      the case between @(Start) and @(End)''.
+
+      #pred blawx_not_interrupted(Start,-winner(X),End) :: ''it is not the case that
+      @(X) is the winner remained the case between @(Start) and @(End)''.
+
+      blawx_not_interrupted(datetime(Start),winner(X),datetime(End)) :- Start \= bot,
+      End \= eot, findall(Time,blawx_becomes(-winner(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(Start),-winner(X),datetime(End)) :- Start \=
+      bot, End \= eot, findall(Time,blawx_becomes(winner(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(bot),winner(X),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(-winner(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(bot),-winner(X),datetime(End)) :- End \= eot,
+      findall(Time,blawx_becomes(winner(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(Start),winner(X),datetime(eot)) :- Start \= bot,
+      findall(Time,blawx_becomes(-winner(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(Start),-winner(X),datetime(eot)) :- Start \=
+      bot, findall(Time,blawx_becomes(winner(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(bot),winner(X),datetime(eot)) :- blawx_initially(winner(X)),
+      blawx_ultimately(winner(X)), findall(Time,blawx_becomes(-winner(X),datetime(Time)),[]).
+
+      blawx_not_interrupted(datetime(bot),-winner(X),datetime(eot)) :- blawx_initially(-winner(X)),
+      blawx_ultimately(-winner(X)), findall(Time,blawx_becomes(winner(X),datetime(Time)),[]).
+
+      blawx_as_of(winner(X),datetime(Time)) :- blawx_initially(winner(X)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),winner(X),datetime(BeforeT)).
+
+      blawx_as_of(winner(X),datetime(Time)) :- blawx_becomes(winner(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),winner(X),datetime(Time)).
+
+      blawx_as_of(-winner(X),datetime(Time)) :- blawx_initially(-winner(X)), BeforeT
+      #< Time,blawx_not_interrupted(datetime(bot),-winner(X),datetime(BeforeT)).
+
+      blawx_as_of(-winner(X),datetime(Time)) :- blawx_becomes(-winner(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),-winner(X),datetime(Time)).
+
+      blawx_during(datetime(Start),winner(X),datetime(End)) :- blawx_becomes(winner(X),datetime(Start)),
+      blawx_becomes(-winner(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),winner(X),datetime(End)).
+
+      blawx_during(datetime(bot),winner(X),datetime(End)) :- blawx_initially(winner(X)),
+      blawx_becomes(-winner(X),datetime(End)), blawx_not_interrupted(datetime(bot),winner(X),datetime(End)).
+
+      blawx_during(datetime(Start),winner(X),datetime(eot)) :- blawx_ultimately(winner(X)),
+      blawx_becomes(-winner(X),datetime(Start)), blawx_not_interrupted(datetime(Start),winner(X),datetime(eot)).
+
+      blawx_during(datetime(bot),winner(X),datetime(eot)) :- blawx_initially(winner(X)),
+      blawx_ultimately(winner(X)), blawx_becomes(-winner(X),datetime(Start)), blawx_not_interrupted(datetime(bot),winner(X),datetime(eot)).
+
+      blawx_during(datetime(Start),-winner(X),datetime(End)) :- blawx_becomes(-winner(X),datetime(Start)),
+      blawx_becomes(winner(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),-winner(X),datetime(End)).
+
+      blawx_during(datetime(bot),-winner(X),datetime(End)) :- blawx_initially(-winner(X)),
+      blawx_becomes(winner(X),datetime(End)), blawx_not_interrupted(datetime(bot),-winner(X),datetime(End)).
+
+      blawx_during(datetime(Start),-winner(X),datetime(eot)) :- blawx_ultimately(-winner(X)),
+      blawx_becomes(winner(X),datetime(Start)), blawx_not_interrupted(datetime(Start),-winner(X),datetime(eot)).
+
+      blawx_during(datetime(bot),-winner(X),datetime(eot)) :- blawx_initially(-winner(X)),
+      blawx_ultimately(-winner(X)), blawx_becomes(-winner(X),datetime(Start)), blawx_not_interrupted(datetime(bot),-winner(X),datetime(eot)).
+
+
+      blawx_category(sign).
+
+      blawx_category_nlg(sign,"","is a sign").
+
+      :- dynamic sign/1.
+
+      #pred sign(X) :: ''@(X) is a sign''.
+
+      #pred holds(user,sign,X) :: ''it is provided as a fact that @(X) is a sign''.
+
+      #pred holds(user,-sign,X) :: ''it is provided as a fact that it is not the case
+      that @(X) is a sign''.
+
+      #pred holds(Z,sign,X) :: ''the conclusion in @(Z) that @(X) is a sign holds''.
+
+      #pred holds(Z,-sign,X) :: ''the conclusion in @(Z) that it is not the case that
+      @(X) is a sign holds''.
+
+      #pred according_to(Z,sign,X) :: ''according to @(Z), @(X) is a sign''.
+
+      #pred according_to(Z,-sign,X) :: ''according to @(Z), it is not the case that
+      @(X) is a sign''.
+
+      #pred blawx_defeated(Z,sign,X) :: ''the conclusion in @(Z) that @(X) is a sign
+      is defeated''.
+
+      #pred blawx_defeated(Z,-sign,X) :: ''the conclusion in @(Z) that it is not the
+      case that @(X) is a sign is defeated''.
+
+      #pred blawx_initially(sign(X)) :: ''that @(X) is a sign holds initially''.
+
+      #pred blawx_initially(-sign(X)) :: ''that it is not the case that @(X) is a
+      sign holds initially''.
+
+      #pred blawx_ultimately(sign(X)) :: ''that @(X) is a sign holds ultimately''.
+
+      #pred blawx_ultimately(-sign(X)) :: ''that it is not the case that @(X) is a
+      sign holds ultimately''.
+
+      #pred blawx_as_of(sign(X),T) :: ''that @(X) is a sign holds at @(T)''.
+
+      #pred blawx_as_of(-sign(X),T) :: ''that it is not the case that @(X) is a sign
+      holds at @(T)''.
+
+      #pred blawx_during(T1,sign(X),T2) :: ''that @(X) is a sign held between @(T1)
+      and @(T2)''.
+
+      #pred blawx_during(T1,-sign(X),T2) :: ''that it is not the case that @(X) is
+      a sign held between @(T1) and @(T2)''.
+
+      #pred blawx_becomes(sign(X),T) :: ''that @(X) is a sign became true at @(T)''.
+
+      #pred blawx_becomes(-sign(X),T) :: ''that it is not the case that @(X) is a
+      sign became true at @(T)''.
+
+      #pred blawx_not_interrupted(Start,sign(X),End) :: ''@(X) is a sign remained
+      the case between @(Start) and @(End)''.
+
+      #pred blawx_not_interrupted(Start,-sign(X),End) :: ''it is not the case that
+      @(X) is a sign remained the case between @(Start) and @(End)''.
+
+      blawx_not_interrupted(datetime(Start),sign(X),datetime(End)) :- Start \= bot,
+      End \= eot, findall(Time,blawx_becomes(-sign(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(Start),-sign(X),datetime(End)) :- Start \= bot,
+      End \= eot, findall(Time,blawx_becomes(sign(X),datetime(Time)),Times),blawx_list_not_between(Times,Start,End).
+
+      blawx_not_interrupted(datetime(bot),sign(X),datetime(End)) :- End \= eot, findall(Time,blawx_becomes(-sign(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(bot),-sign(X),datetime(End)) :- End \= eot, findall(Time,blawx_becomes(sign(X),datetime(Time)),Times),blawx_list_not_before(Times,End).
+
+      blawx_not_interrupted(datetime(Start),sign(X),datetime(eot)) :- Start \= bot,
+      findall(Time,blawx_becomes(-sign(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(Start),-sign(X),datetime(eot)) :- Start \= bot,
+      findall(Time,blawx_becomes(sign(X),datetime(Time)),Times),blawx_list_not_after(Times,Start).
+
+      blawx_not_interrupted(datetime(bot),sign(X),datetime(eot)) :- blawx_initially(sign(X)),
+      blawx_ultimately(sign(X)), findall(Time,blawx_becomes(-sign(X),datetime(Time)),[]).
+
+      blawx_not_interrupted(datetime(bot),-sign(X),datetime(eot)) :- blawx_initially(-sign(X)),
+      blawx_ultimately(-sign(X)), findall(Time,blawx_becomes(sign(X),datetime(Time)),[]).
+
+      blawx_as_of(sign(X),datetime(Time)) :- blawx_initially(sign(X)), BeforeT #<
+      Time,blawx_not_interrupted(datetime(bot),sign(X),datetime(BeforeT)).
+
+      blawx_as_of(sign(X),datetime(Time)) :- blawx_becomes(sign(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),sign(X),datetime(Time)).
+
+      blawx_as_of(-sign(X),datetime(Time)) :- blawx_initially(-sign(X)), BeforeT #<
+      Time,blawx_not_interrupted(datetime(bot),-sign(X),datetime(BeforeT)).
+
+      blawx_as_of(-sign(X),datetime(Time)) :- blawx_becomes(-sign(X),datetime(BeforeT)),BeforeT
+      #< Time,blawx_not_interrupted(datetime(BeforeT),-sign(X),datetime(Time)).
+
+      blawx_during(datetime(Start),sign(X),datetime(End)) :- blawx_becomes(sign(X),datetime(Start)),
+      blawx_becomes(-sign(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),sign(X),datetime(End)).
+
+      blawx_during(datetime(bot),sign(X),datetime(End)) :- blawx_initially(sign(X)),
+      blawx_becomes(-sign(X),datetime(End)), blawx_not_interrupted(datetime(bot),sign(X),datetime(End)).
+
+      blawx_during(datetime(Start),sign(X),datetime(eot)) :- blawx_ultimately(sign(X)),
+      blawx_becomes(-sign(X),datetime(Start)), blawx_not_interrupted(datetime(Start),sign(X),datetime(eot)).
+
+      blawx_during(datetime(bot),sign(X),datetime(eot)) :- blawx_initially(sign(X)),
+      blawx_ultimately(sign(X)), blawx_becomes(-sign(X),datetime(Start)), blawx_not_interrupted(datetime(bot),sign(X),datetime(eot)).
+
+      blawx_during(datetime(Start),-sign(X),datetime(End)) :- blawx_becomes(-sign(X),datetime(Start)),
+      blawx_becomes(sign(X),datetime(End)), Start #< End, blawx_not_interrupted(datetime(Start),-sign(X),datetime(End)).
+
+      blawx_during(datetime(bot),-sign(X),datetime(End)) :- blawx_initially(-sign(X)),
+      blawx_becomes(sign(X),datetime(End)), blawx_not_interrupted(datetime(bot),-sign(X),datetime(End)).
+
+      blawx_during(datetime(Start),-sign(X),datetime(eot)) :- blawx_ultimately(-sign(X)),
+      blawx_becomes(sign(X),datetime(Start)), blawx_not_interrupted(datetime(Start),-sign(X),datetime(eot)).
+
+      blawx_during(datetime(bot),-sign(X),datetime(eot)) :- blawx_initially(-sign(X)),
+      blawx_ultimately(-sign(X)), blawx_becomes(-sign(X),datetime(Start)), blawx_not_interrupted(datetime(bot),-sign(X),datetime(eot)).
+
+      sign(rock).
+
+      sign(paper).
+
+      sign(scissor).'
+- model: blawx.blawxtest
+  pk: 10
+  fields:
+    ruledoc: 6
+    test_name: winner
+    xml_content: <xml xmlns="https://developers.google.com/blockly/xml"><block type="query"
+      id="$%D?~ONwg1!/o-jUVmXZ" x="251" y="106"><statement name="query"><block type="unary_attribute_selector"
+      id="Ul=T(.+n:=PNP:G+D+,Q"><mutation xmlns="http://www.w3.org/1999/xhtml" attributename="winner"
+      attributetype="boolean"></mutation><field name="prefix"></field><field name="postfix">is
+      the winner</field><value name="first_element"><block type="variable" id="Ug;XnvIsxM1,Ym7SH85F"><field
+      name="variable_name">A</field></block></value></block></statement></block></xml>
+    scasp_encoding: ?- winner(A).
+    tutorial: ''
+    view: ''
+    fact_scenario: ''

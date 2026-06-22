@@ -1,0 +1,32 @@
+right_to_portability(Subject, Data, Controller)<=
+personal_data(Data, Subject),
+processing_by_contract(Data, Controller),
+automated_processing(Data).
+
+right_to_portability(Subject, Data, Controller)<=
+personal_data(Data, Subject),
+processing_by_consent(Data, Controller),
+automated_processing(Data).
+
+right_to_transmission(Subject, Data, Controller)<=
+right_to_portability(Subject, Data, Controller).
+
+exception(right_to_portability(Subject, Data, Controller),
+processing_by_public_interest(Subject, Data, Controller)).
+
+processing_by_public_interest(Subject, Data, Controller)<=
+processing_by_public_interest_fact(Subject, Data, Controller).
+
+fact(personal_data(name, marco)).
+fact(processing_by_contract(name, procura)).
+fact(processing_by_contract(name, facebook)).
+
+fact(automated_processing(name)).
+
+fact(personal_data(age, gali)).
+fact(processing_by_consent(age, tiktok)).
+fact(automated_processing(age)).
+
+
+fact(processing_by_public_interest_fact(marco, name, procura)).
+fact(right_to_portability(pisano, piedi, cirsfid)).

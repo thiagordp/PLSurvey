@@ -1,4 +1,0 @@
-observed(stipulates_contract(marco))
-observed(online_delivery(marco))
-observed(req(art20_1, marco))
-observed(thirty_days)

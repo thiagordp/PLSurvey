@@ -1,0 +1,56 @@
+:- compiler_options{omni=on}.
+:- use_argumentation_theory.
+:- compiler_options{expert=on}.
+
+// Definizioni
+PortabilityRight[subject => \object, data => \object, controller => \object].
+TransmissionRight :: PortabilityRight.
+
+// REGOLA DEFAULT (usiamo ==> e tag parametrizzato)
+@!{defaultRule(?C,?D,?S,?D,?Basis)} 
+?R:PortabilityRight[subject -> ?S, data -> ?D, controller -> ?C] ==>
+    ?Proc:Processing[
+        data -> ?D, subject -> ?S, controller -> ?C, 
+        legal_basis -> ?Basis
+    ],
+    (?Basis == consent ; ?Basis == contract),
+    ?D:automated_processing,
+    ?R = ${portability(?C, ?D, ?S)}.
+
+// REGOLA ECCEZIONE (usiamo ==> e tag parametrizzato)
+@!{exception(?C,?D,?S)} 
+\neg ?R:PortabilityRight[subject -> ?S, data -> ?D, controller -> ?C] ==>
+    ?Proc:Processing[
+        data -> ?D, subject -> ?S, controller -> ?C, 
+        legal_basis -> ?Basis
+    ],
+    (?Basis == public_interest ; ?Basis == official_authority),
+    ?R = ${portability_ex(?C, ?D, ?S)}.
+
+// LOGICA DI CONFLITTO
+// 1. Diciamo al sistema che i due predicati sono opposti
+\opposes(?R:PortabilityRight, \neg ?R:PortabilityRight).
+
+// 2. Definiamo la priorità usando i tag parametrizzati
+\overrides(exception(?C,?D,?S), defaultRule(?C,?D,?S)).
+
+// --- REGOLE DERIVATE (possono restare standard :- ) ---
+
+?Obl:Obligation[
+    obligor -> ?C, obligee -> ?S, action -> provide_data(?C, ?D)
+] :-
+    ?R:PortabilityRight[subject -> ?S, data -> ?D, controller -> ?C],
+    ?Obl = ${obl_provide(?C, ?D, ?S)}.
+
+?R:TransmissionRight :-
+    ?R:PortabilityRight[subject -> ?S, data -> ?D, controller -> ?C],
+    is_feasible(direct_transmission(?C, ?D)).
+
+// --- DATI ---
+proc1:Processing[
+    data -> data1, subject -> mario_rossi, controller -> google,
+    legal_basis -> consent,
+    legal_basis -> public_interest
+].
+data1:automated_processing.
+is_feasible(direct_transmission(google, data1)).

@@ -1,0 +1,35 @@
+C:/Users/pare9/CODE/instal-stable/examples/art20gdpr:/workdir instal-stable solve $* -i /workdir/art20gdpr.ial -f /workdir/art20gdpr.iaf -d /workdir/art20gdpr.idc -q /workdir/art20gdpr.iaq -v
+
+ docker run -v C:/Users/pare9/CODE/instal-stable/examples/art20gdpr/art20_v3:/workdir instal-stable solve $* -i /workdir/test.ial -f /workdir/art20gdpr_v3.iaf -d /workdir/art20gdpr_v3.idc -q /workdir/art20gdpr_v3.iaq -v
+
+
+
+
+
+
+inst event lawful_basis(Subject, Controller);
+inst event collect_data(Controller, Subject);
+
+fluent automated_processing(Controller);
+fluent lawful_basis(Subject, Controlle);
+
+
+stipulates_contract(Subject, Controller) generates lawful_basis(Subject, Controller);
+stipulates_contract(Subject, Controller) generates collect_data(Controller, Subject);
+
+
+collect_data(Controller, Subject) initiates automated_processing(Controller);
+
+lawful_basis(Subject, Controller) initiates portability;
+
+
+
+
+
+initially pow(collect_data(Controller, Subject)) perm(collect_data(Controller, Subject))
+initially pow(lawful_basis(Subject, Controller)) perm(lawful_basis(Subject, Controller))
+
+
+
+portability_request(Subject) generates request_art20_1(Subject);
+request_art20_1(Subject) initiates obl(provide_data(Subject), deadline, get_fine) if portability_right(Subject)
