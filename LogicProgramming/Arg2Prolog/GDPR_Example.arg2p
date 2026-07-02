@@ -1,0 +1,73 @@
+%%%% Example Facts
+
+f1 :-> processing_basis(consent(subject, controller)).
+% f2 :-> processing_basis(public_interest(subject, controller)).
+f3 :-> processing_method(automatic).
+f4 :-> feasible(data_transmission(new_controller)).
+
+f5 :-> request(subject, data_portability(controller)).
+f6 :-> request(subject, data_transmission(controller, new_controller)).
+
+f7 :-> -provide_data(controller, new_controller).
+
+f8 :-> annual_turnover(controller, 40000000).
+
+f9 :-> concrete_tax_harm(subject).
+
+%%%% (Optional) Derived permissions (One could model deontic axioms of their choice, e.g. weak permissions, etc...)
+r(Z) : o(Z) => p(Z).
+
+%%%% (Optional) Violation (Can be expanded to arbitrary conflicts)
+v(Z) : o(Z), -Z => violation(Z).
+
+% 1. The data subject shall have the right to receive the personal data concerning him or her, which he or she has provided to a controller, in a structured, commonly used and machine-readable format and have the right to transmit those data to another controller without hindrance from the controller to which the personal data have been provided, where:
+%  (a) the processing is based on consent pursuant to point (a) of Article 6(1) or point (a) of Article 9(2) or on a contract pursuant to point (b) of Article 6(1); and
+%  (b) the processing is carried out by automated means.
+
+r1(Subject, Controller) : processing_basis(consent(Subject, Controller)), processing_method(automatic) => right(Subject, data_portability(Controller)).
+r2(Subject, Controller) : processing_basis(contract(Subject, Controller)), processing_method(automatic) => right(Subject, data_portability(Controller)).
+r3(Subject, Controller) : right(Subject, data_portability(Controller)), request(Subject, data_portability(Controller)) => o(provide_data(Controller, Subject)).
+
+% 2. In exercising his or her right to data portability pursuant to paragraph 1, the data subject shall have the right to have the personal data transmitted directly from one controller to another, where technically feasible.
+
+r4(Subject, Controller, NewController) : right(Subject, data_portability(Controller)), feasible(data_transmission(NewController)) => right(Subject, data_transmission(Controller, NewController)).
+r5(Subject, Controller, NewController) : right(Subject, data_transmission(Controller, NewController)), request(Subject, data_transmission(Controller, NewController)) => o(provide_data(Controller, NewController)).
+
+% 3.The exercise of the right referred to in paragraph 1 of this Article shall be without prejudice to Article 17. That right shall not apply to processing necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
+
+r6(Subject, Controller) : processing_basis(public_interest(Subject, Controller)) => -r3(Subject, Controller).
+r7(Subject, Controller) : processing_basis(public_interest(Subject, Controller)) => -r5(Subject, Controller, _).
+
+% 4. The right referred to in paragraph 1 shall not adversely affect the rights and freedoms of others.
+
+% No code needed
+
+%%%% (Optional) Preferences (An undercutter would be more suited but lets use preferences anyway)
+
+% Art. 2-undecies codice privacy (Limitazioni ai diritti dell'interessato)
+% 1. I diritti di cui agli articoli da 15 a 22 del Regolamento non possono essere esercitati con richiesta al titolare del trattamento ovvero con reclamo ai sensi dell'articolo 77 del Regolamento qualora dall'esercizio di tali diritti possa derivare un pregiudizio effettivo e concreto:
+%	[..]
+%	f-bis) agli interessi tutelati in materia tributaria e allo svolgimento delle attivita di prevenzione e contrasto all'evasione fiscale.
+
+r9(Subject, Controller) : processing_basis(consent(Subject, Controller)), processing_method(automatic), concrete_tax_harm(Subject) => -right(Subject, data_portability(Controller)).
+sup(r9(X, Y), r1(X, Y)).
+
+%%%% (Optional) CTD
+ctd(Z, X) : violation(Z), remedy(Z, X) => o(X).
+
+% Art.83(5)(b) GDPR
+
+% 5.Infringements of the following provisions shall, in accordance with paragraph 2, be subject to administrative fines up to 20 000 000 EUR, or in the case of an undertaking, up to 4 % of the total worldwide annual turnover of the preceding financial year, whichever is higher:
+% the basic principles for processing, including conditions for consent, pursuant to Articles 5, 6, 7 and 9;
+% b) the data subjects' rights pursuant to Articles 12 to 22;
+
+r8(X, Y) : annual_turnover(X, Y), prolog(calculate_fine(Y, Z)) => remedy(provide_data(X, _), pay_fine(X, Z)).
+
+calculate_fine(Y, 20000000) :- Z is Y * 0.04, Z > 20000000.
+calculate_fine(Y, Z) :- Z is Y * 0.04, Z =< 20000000.
+
+right(subject, data_portability(controller)).
+o(provide_data(controller, subject)).
+p(provide_data(controller, subject)).
+violation(provide_data(controller, new_controller)).
+remedy(provide_data(controller, _), pay_fine(controller, Z)).

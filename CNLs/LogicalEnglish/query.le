@@ -1,9 +1,0 @@
-query portability_obligation:
-
-does the data controller have the obligation that
-the data controller provide the data to the data subject?
-
-query transmission_obligation:
-
-does the data controller have the obligation that
-the data controller transmit the data directly to another data controller?

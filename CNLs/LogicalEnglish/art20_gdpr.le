@@ -1,5 +1,12 @@
-the knowledge base data_portability includes:
+the templates are:
+*a right* exists.
+*a thing* is based on *a thing*.
+*a person* has the obligation that *a thing*.
+*a person* provide *a thing* to *a person*.
+*a person* requests *a thing*.
+*a person* transmits *a thing* directly to *a person*.
 
+the knowledge base data_portability includes:
 the right to data portability exists if
 the processing is based on consent
     or the processing is based on a contract
@@ -20,3 +27,5 @@ the data controller has the obligation that
 the data controller transmits the data directly to another data controller
 if the right to obtain direct transmission of data among two controllers exists
 and the data subject requests the data transmission.
+
+

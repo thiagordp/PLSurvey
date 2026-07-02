@@ -1,0 +1,6 @@
+{
+  "$class": "org.accordproject.dataaccess.contractState",
+  "status": "RUN",
+  "deadline": "2026-03-15T10:35:40.958+01:00",
+  "$identifier": "state-1"
+}

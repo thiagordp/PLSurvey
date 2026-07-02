@@ -1,0 +1,4 @@
+{
+  "$class": "org.accordproject.dataaccess.DataRequest",
+  "message": "Richiesta di accesso ai record dei clienti"
+}

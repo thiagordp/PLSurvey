@@ -1,0 +1,6 @@
+{
+  "$class": "org.accordproject.dataaccess.shareRequest",
+  "recipient": "marco",
+  "isGatekeeper": false,
+  "hasWrittenAuthorization": false
+}

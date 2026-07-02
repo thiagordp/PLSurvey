@@ -1,0 +1,9 @@
+{
+  "$class": "org.accordproject.dataaccess.DataAccessContract",
+  "user": "resource:org.accordproject.party.Party#Alice",
+  "dataHolder": "resource:org.accordproject.party.Party#Bob",
+  "dataDescription": "Customer Records",
+  "deadlineDays": 5,
+  "contractId": "b0d32c96-18f2-44a3-b0c9-0677cb8bb310",
+  "$identifier": "b0d32c96-18f2-44a3-b0c9-0677cb8bb310"
+}

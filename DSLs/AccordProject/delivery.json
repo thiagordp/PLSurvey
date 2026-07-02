@@ -1,0 +1,4 @@
+{
+  "$class": "org.accordproject.dataaccess.DataDelivery",
+  "dataUrl": "Data Access for the user"
+}

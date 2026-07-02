@@ -1,0 +1,56 @@
+namespace org.accordproject.dataaccess
+
+import org.accordproject.obligation.*
+import org.accordproject.time.*
+import org.accordproject.money.*
+
+
+contract dataaccess over DataAccessContract state contractState {
+  clause requestdata(request : DataRequest) : DataResponse emits NotificationObligation {
+    // Guard against calling late delivery clause too early
+    let d = addDuration(now(), contract.deadlineDays);
+
+    // Update state
+    set state.deadline = some(d);
+  
+      // Emettiamo l'obbligazione per il Data Holder
+      emit NotificationObligation{
+        contract: contract,
+        promisor: some(contract.dataHolder),
+        promisee: some(contract.user),
+        deadline: some(d),
+        title: "Make data Available", 
+        message: "Grant access to: " ++ contract.dataDescription
+      };
+
+    return DataResponse{
+      accessLink: "Richiesta presa in carico. Scadenza: " ++ format(d, "YYYY-MM-DD")
+    }
+  }
+
+  clause deliverdata(request : DataDelivery) : DataResponse {
+    match state.deadline 
+    with let? d then
+      enforce isBefore(now(), d)
+      else throw Error{ message: "Termine scaduto"}; 
+
+      // Aggiorna lo stato nel contractState
+      set state.status = COMPLETED;
+
+      return DataResponse{
+          accessLink: "Dati consegnati correttamente all'indirizzo: " ++ request.dataUrl
+      }
+    else
+      throw Error{ message: "Scadenza non trovata" 
+    } 
+  }
+
+// Permitted uses  
+  clause checkPermittedUse(request : shareRequest) : DataResponse {
+    if request.isGatekeeper and !request.hasWrittenAuthorization
+    then throw Error{ message: "Sharing forbidden: il destinatario è un Gatekeeper senza autorizzazione scritta (Art. 5)." }
+    else return DataResponse{ 
+      accessLink: "Condivisione autorizzata con: " ++ request.recipient 
+    }
+  }
+}

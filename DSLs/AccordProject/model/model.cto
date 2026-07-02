@@ -1,0 +1,45 @@
+namespace org.accordproject.dataaccess
+
+import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
+import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto
+import org.accordproject.party.* from https://models.accordproject.org/accordproject/party.cto
+import org.accordproject.obligation.* from https://models.accordproject.org/accordproject/obligation.cto
+import org.accordproject.time.* from https://models.accordproject.org/time@0.2.0.cto
+
+
+enum ContractStatus {
+  o RUN
+  o COMPLETED
+}
+
+// Template model
+asset DataAccessContract extends Contract {
+  --> Party user           // Riferimento alla parte "User"
+  --> Party dataHolder     // Riferimento alla parte "Data Holder"
+  o String dataDescription // Descrizione dei dati (es. "Data and metadata")
+  o Duration deadlineDays   // I "5" giorni della clausola
+}
+
+asset contractState extends State {
+  o ContractStatus status
+  o DateTime deadline optional
+}
+// Request
+transaction DataRequest extends Request {
+  o String message
+}
+// Request
+transaction DataDelivery extends Request {
+  o String dataUrl
+}
+
+transaction shareRequest extends Request {
+  o String recipient
+  o Boolean isGatekeeper
+  o Boolean hasWrittenAuthorization
+}
+
+// Response
+transaction DataResponse extends Response {
+  o String accessLink // Il link o conferma di accesso fornito
+}
